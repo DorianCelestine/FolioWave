@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+@font-face {
+  font-family: OutRun;
+  src: url("Streamster.ttf");
+}
+
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 3px #CF33D9) drop-shadow(0 0 3px #CF33D9);
+  }
+  50% {
+    filter: drop-shadow(0 0 1px #CF33D9) drop-shadow(0 0 1px #CF33D9);
+  }
+  100% {
+    filter: drop-shadow(0 0 3px #CF33D9) drop-shadow(0 0 3px #CF33D9);
+  }
+}
+
+@keyframes glow2 {
+  0% {
+    filter: drop-shadow(0 0 3px  #64dcff ) drop-shadow(0 0 3px  #64dcff);
+  }
+  50% {
+    filter: drop-shadow(0 0 1px  #64dcff ) drop-shadow(0 0 1px  #64dcff);
+  }
+  100% {
+    filter: drop-shadow(0 0 3px  #64dcff ) drop-shadow(0 0 3px  #64dcff);
+  }
+}
+
+body{
+    background: url(test1.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+header{
+}
+
+article{
+	width: 100%;
+	height: 87vh;
+	display: inline-block;
+ 
+}
+
+.wave{
+	font-family: "OutRun";
+	text-transform: uppercase;
+	color: transparent;
+    -webkit-text-stroke: 2px #F4C6F4;
+	animation: glow 2.5s linear infinite;
+	font-size: 2vw;
+}
+.wave:hover{
+	text-decoration: none;
+	-webkit-text-stroke: 1px #9ce5fc;
+	animation: glow2 2.5s linear infinite;
+
+}
+
+#teste{
+	margin-right: 2vw;
+}
+
+#title{
+	margin: 1vw;
+	float: left;
+	display: inline-block;
+}
+#title img{
+	width: 4vw;
+}
+footer{
+}
+
+button {
+    border-radius: 50%;
+    background-image: url(sun-final.png);
+    background-position: center;
+    height: 24vw;
+    width: 24vw;
+    border-style: none;
+}
+
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
