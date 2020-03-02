@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.container{
+    background: url(test/test1.png);
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover; 
+}
+
+.header{
+    display: flex;
+    height: 10vh;
+    align-items: flex-end;
+}
+
+.logo{
+    flex: 2;
+}
+
+.logo img{
+    height: 40px;
+    margin-left: 40px;
+}
+
+@font-face {
+  font-family: OutRun;
+  src: url("Streamster.ttf");
+}
+
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 3px #CF33D9) drop-shadow(0 0 3px #CF33D9);
+  }
+  50% {
+    filter: drop-shadow(0 0 1px #CF33D9) drop-shadow(0 0 1px #CF33D9);
+  }
+  100% {
+    filter: drop-shadow(0 0 3px #CF33D9) drop-shadow(0 0 3px #CF33D9);
+  }
+}
+
+@keyframes glow2 {
+  0% {
+    filter: drop-shadow(0 0 3px  #64dcff ) drop-shadow(0 0 3px  #64dcff);
+  }
+  50% {
+    filter: drop-shadow(0 0 1px  #64dcff ) drop-shadow(0 0 1px  #64dcff);
+  }
+  100% {
+    filter: drop-shadow(0 0 3px  #64dcff ) drop-shadow(0 0 3px  #64dcff);
+  }
+}
+
+.wave{
+	font-family: "OutRun";
+	text-transform: uppercase;
+	color: transparent;
+    -webkit-text-stroke: 2px #F4C6F4;
+	animation: glow 2.5s linear infinite;
+	font-size: 2vw;
+}
+.wave:hover{
+	text-decoration: none;
+	-webkit-text-stroke: 1px #9ce5fc;
+	animation: glow2 2.5s linear infinite;
+}
+
+button {
+    border-radius: 50%;
+    background-image: url(test/sun-final.png);
+    background-position: center;
+    height: 24vw;
+    width: 24vw;
+    border-style: none;
+}
+
+#teste{
+	margin-right: 2vw;
+}
+
+#essai{
+    width: 100%;
+	height: 87vh;
+	display: inline-block;
+}
