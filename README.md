@@ -1,2 +1,2 @@
-# C-BO
+# FolioWave
 Projet de S4
