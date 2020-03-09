@@ -10,11 +10,10 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main>
         <div class="container">
             <div class="header">
                 <div class="logo">
-                    <a href="#" id="title" class="wave"><img src="test/logo.png" alt="">FOLLIOWAVE</a>
+                    <a href="#" id="title" class="wave"><img src="images/logo.png" alt="">FOLLIOWAVE</a>
                 </div>
                 <div class="navlist">
                     <p><a href="#" class="wave" id="teste">CONTACT</a></p>
@@ -24,10 +23,15 @@
                 <ul id="scene">
                     <div class="row">
                         <div class="col-5">
-                            <?php ?>
+                            <? = $module ?>
                         </div>
                         <div class="col-5">
-                            <li class="layer" data-depth="0.7"><button>Commencer maintenant</button></li>
+                            <li class="layer" data-depth="0.7">
+                                <?php
+                                    echo '<a href="index.php?module=palette&action=palette"><button>Commencer maintenant</button></a>';
+                                ?>
+                            </li>
+                            
                         </div>
                     </div>
                 </ul>
@@ -37,6 +41,6 @@
                 var parallax = new Parallax(scene);
             </script>
         </div>
-    </main>
+    
 </body>
 </html>
