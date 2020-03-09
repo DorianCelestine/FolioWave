@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>UNICORN PARALLAX</title>
+    <title>FolioWave</title>
     <script src="parallax.js"></script>
     <link rel="stylesheet" href="index-style.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:700&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
                 <ul id="scene">
                     <div class="row">
                         <div class="col-5">
-                            <p>vraiment bo</p>
+                            <?php ?>
                         </div>
                         <div class="col-5">
                             <li class="layer" data-depth="0.7"><button>Commencer maintenant</button></li>
