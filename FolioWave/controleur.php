@@ -13,5 +13,9 @@
 		public function getAff(){
 			return $this->vue->getBody();
 		}
+		
+		public function sendMail(){
+		    $this->mod->sendMail();
+		}
 	}
 ?>

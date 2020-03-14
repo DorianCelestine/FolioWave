@@ -17,6 +17,9 @@
     display: flex;
     height: 10vh;
     align-items: flex-end;
+    padding-bottom:1.5vh;
+    background-color:#0e0c22;
+    box-shadow: 0px 0px 50px 10px rgba(201, 105, 196, 0.66);
 }
 
 .logo{
@@ -24,9 +27,9 @@
 }
 
 .logo img{
-    vertical-align:top;
-    height: 40px;
+    height: 3vw;
     margin-left: 40px;
+    vertical-align:top;
 }
 
 @font-face {
@@ -66,24 +69,26 @@
 	animation: glow 2.5s linear infinite;
 	font-size: 2vw;
 }
+
 .wave:hover{
 	text-decoration: none;
 	-webkit-text-stroke: 1px #9ce5fc;
 	animation: glow2 2.5s linear infinite;
 }
 
-button {
+#sun {
     border-radius: 50%;
     background-image: url(images/sun-final.png);
     background-position: center;
     height: 17vw;
     width: 17vw;
     border-style: none;
-    margin-left: 50%;
+    margin-top: 17vh;
+    margin-left: 60vw;
 }
 
-#teste{
-	margin-right: 2vw;
+#contactLink{
+	margin-right:3vw;
 }
 
 #essai{
@@ -92,17 +97,67 @@ button {
 	display: inline-block;
 }
 
-.center-screen {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 100vh;
+
+footer{
+    box-shadow: inset 0px 0px 40px 8px #1378ed;
+    padding-top:5vh;
+    padding-bottom:2vh;
+    background-color:#0e0c22;
+    color:white;
+    padding-bottom:15vh;
 }
 
-.col-2 img {
-    width: 14vw;
-    height: 14vw;
-    margin: 1vw; 
+footer p{
+    color: #27a3ff;
+}
+
+#footerL{
+    margin-left:10vw;
+    display:inline-block;
+}
+
+#footerL img{
+    margin-top:4vh;
+    height:25vh;
+}
+
+#footerR{
+    font-family: "arial";
+    font-size:1vw;
+    float:right;
+    margin-right:5vw;
+    display:inline-block;
+    border-left:1px solid #27a3ff;
+    padding-left:7vw;
+}
+
+input{
+    margin-top: 2vh;
+    width :40vw;
+    height:3vh;
+    border:none;
+    border-top:1px;
+    border-bottom:1px solid #27a3ff;
+    background-color:#0e0c22;
+    color :#27a3ff;
+}
+
+form textarea{
+    margin-top:2vh;
+    width:40vw;
+    background-color:#0e0c22;
+    color :#27a3ff;
+    border:none;
+    height:15vh;
+    border-bottom:1px solid #27a3ff;
+}
+
+form button{
+    margin-left:15vw;
+    padding:16px 31px;
+    border-radius:29px;
+    background-color:#0e0c22;
+    color :#27a3ff;
+	border:2px solid #27a3ff;
+    margin-top:2vh;
 }
