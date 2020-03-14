@@ -1,0 +1,186 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+header .position-fixed {
+	top: 0;
+	left: 0;
+	width: 4vw;
+	height: 100%;
+	background-color: #c10000;
+	display: inline-block;
+}
+
+header img {
+	width: 4vw;
+	height: 4vw;
+	display: inline-block;
+}
+
+header ul {
+	width: 100%;
+	height: 100%;
+	list-style: none;
+}
+
+#listLogo{
+	top: 0;
+	left: 0;
+}
+
+header ul li {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+section {
+	position: absolute;
+	left: 4%;
+	float: right;
+	width: 96%;
+	height: 100%;
+	display: inline-block;
+}
+
+.page {
+	height: 100%;
+}
+
+/*******************************************/
+
+#titre p {
+	text-align: right;
+	margin-top: 15%;
+	margin-right: 5%;
+	color: #ff4949;
+	font-size: 40px;
+	font-family: verdana;
+}
+
+#texte1 p {
+	text-align: right;
+	margin-top: 20%;
+	margin-right: 5%;
+	color: #ff4949;
+	font-size: 40px;
+	font-family: verdana;
+}
+
+#droite{
+	background-image: url('c100.png');
+}
+
+/*******************************************/
+
+#top1 {
+	display: inline-block;
+	width: 100%;
+	height: 50%;
+	background-color: #eeeeee;
+}
+
+#texte2 {
+	width: 50%;
+	height: 100%;
+	float: right;
+	margin-top: 3%;
+	color: #ff4949;
+	font-size: 25px;
+	font-family: verdana;
+}
+
+#bottom1 {
+	display: inline-block;
+	width: 100%;
+	height: 50%;
+}
+
+/*******************************************/
+
+#proj1 {
+	width: 25%;
+	height: 100%;
+	display: inline-block;
+}
+
+#othersProjs {
+	width: 74%;
+	height: 97%;
+	margin-top: 2%;
+	display: inline-block;
+}
+
+#projet1 {
+	width: 90%;
+	height: 92%;
+	margin-left: 5%;
+	display: inline-block;
+}
+
+#topProjs {
+	display: inline-block;
+	width: 100%;
+	height: 50%;
+}
+
+#projet2 {
+	display: inline-block;
+	width: 45%;
+	height: 90%;
+	margin-right: 9.5%;
+}
+
+#projet3 {
+	display: inline-block;
+	width: 45%;
+	height: 90%;
+}
+
+#bottomProjs {
+	display: inline-block;
+	width: 100%;
+	height: 50%;
+}
+
+#projet4 {
+	display: inline-block;
+	width: 100%;
+	height: 90%;
+}
+
+/*******************************************/
+
+#left2 {
+	width: 30%;
+	height: 100%;
+	display: inline-block;
+}
+
+#middle {
+	width: 64%;
+	height: 100%;
+	display: inline-block;
+}
+
+#right2 {
+	width: 5.5%;
+	height: 100%;
+	display: inline-block;
+	float: right;
+	background-image: url("c100.png");
+}
+
+#vide {
+	width: 100%;
+	height: 85%;
+	display: inline-block;
+}
+
+#logoFooter {
+	width: 5vw;
+	height: 5vw;
+	display: inline-block;
+}
