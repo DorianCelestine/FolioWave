@@ -21,5 +21,13 @@
 		public function getPreview(){
 			return $this->vue->getPreview();
 		}
+
+		public function uploadTestA(){
+			return $this->vue->uploadTest();
+		}
+
+		public function uploadTestB(){
+			$this->mod->uploadTest();
+		}
 	}
 ?>

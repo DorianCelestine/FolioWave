@@ -204,11 +204,50 @@
                       </div>
                   </a>
               </section>
+              <a href="https://www.cssparty.com/"  target="_blank">cssparty.com</a>
               </form>';
 		}
-
+    
 		public function getForm(){
-
+      echo'
+            <form action="#" method="post">
+              <input type="text" name="nom" placeholder="nom" required>
+              <input type="text" name="prenom" placeholder="prenom" required>
+              <input type="file" name="logo" id="fileUpload">
+              <input type="file" name="image1" id="fileUpload">
+              <textarea name="texte1" placeholder="Introduction de votre portfolio" required>
+              <input type="file" name="image2" id="fileUpload">
+              <input type="text" name="l1" placeholder="Liens vers votre projet 1" required>
+              <input type="file" name="imageP1" id="fileUpload">
+              <input type="text" name="l2" placeholder="Liens vers votre projet 2" required>
+              <input type="file" name="imageP2" id="fileUpload">
+              <input type="text" name="l3" placeholder="Liens vers votre projet 3" required>
+              <input type="file" name="imageP3" id="fileUpload">
+              <input type="text" name="l4" placeholder="Liens vers votre projet 4" required>
+              <input type="file" name="imageP4" id="fileUpload">
+              <textarea name="texte2" placeholder="Petit texte de contact" required>
+              <input type="file" name="image3" id="fileUpload">
+              <input type="text" name="lkn" placeholder="Liens vers votre linkedin" required>
+              <input type="text" name="fb" placeholder="Liens vers votre Facebook" required>
+              <input type="text" name="twt" placeholder="Liens vers votre twitter" required>
+            </form>
+          ';
 		}
+
+    public function getPreview(){
+
     }
+/*
+    public function uploadTest(){
+      echo'
+        <form action="index.php?module=editeur&action=upload" method="post" enctype="multipart/form-data">
+        <h2>Upload Fichier</h2>
+        <label for="fileUpload">Fichier:</label>
+        <input type="file" name="photo" id="fileUpload">
+        <input type="submit" name="submit" value="Upload">
+        <p><strong>Note:</strong> Seuls les formats .jpg, .jpeg, .jpeg, .gif, .png sont autorisés jusqu\'à une taille maximale de 5 Mo.</p>
+        </form>
+      ';
+    }*/
+  }
 ?>
