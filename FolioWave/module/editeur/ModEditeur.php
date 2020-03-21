@@ -10,11 +10,11 @@
      		    case 'template':
      		        $ctrl->getTemplate();
                     break;
-                    case 'upload':
-                         $ctrl->uploadTest();
-                         break;
+                case 'upload':
+                    $ctrl->upload();
+                    break;
      			default:
-                    $ctrl->getPalette();
+                    $ctrl->getForm();
      			    break;
      		}
     	}
