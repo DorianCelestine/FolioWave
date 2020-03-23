@@ -1,253 +1,294 @@
 <?php    
-    class VueEditeur {
-        
-        public function getAff($contenu){
-        	echo'<!DOCTYPE html>
-                <html lang="fr">
-                    <head>
-                        <meta charset="UTF-8">
-                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-                        <title>FolioWave</title>
-                        <script src="parallax.js"></script>
-                        <link rel="stylesheet" href="index-style.css">
-                        <link rel="stylesheet" href="palette.css">
-                        <link rel="stylesheet" href="animation.css">
-                    </head>
+class VueEditeur {
+    public function getAff($contenu){
+        echo'<!DOCTYPE html>
+        <html lang="fr">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                <title>FolioWave</title>
+                <script src="parallax.js"></script>
+                <link rel="stylesheet" href="index-style.css">
+                <link rel="stylesheet" href="palette.css">
+                <link rel="stylesheet" href="animation.css">
+                <link rel="stylesheet" href="form.css">
+            </head>
                     
-                    <body>'
-                    .$contenu.
-                    '</body>
-                </html>';
-        }
+            <body>'.$contenu.'</body>
+        </html>';
+    }
 
-        public function getPalette(){
-           	echo'
-            <div class="container">
-                <div class="header">
-                    <div class="logo">
-                        <a href="index.php" id="title" class="wave"><img src="images/logo.png" alt="">FOLLIOWAVE</a>
-                    </div>
-                    <div class="navlist">
-                        <p><a href="#" class="wave" id="contactLink">CONTACT</a></p>
-                    </div>
+    public function getPalette(){
+        echo'
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <a href="index.php" id="title" class="wave"><img src="images/logo.png" alt="">FOLLIOWAVE</a>
                 </div>
-
-                <div class="center">
-                    <form id="f1" action="index.php?module=editeur&action=template" method="POST">
-                    <input type="hidden" class="form-control" name="palette" value="p1"required>
+                <div class="navlist">
+                    <p><a href="index.php#contact" class="wave" id="contactLink">CONTACT</a></p>
+                </div>
+                
+            </div>
+            
+            <div class="center">
+                <form id="f1" action="index.php?module=editeur&action=template" method="POST">
+                <input type="hidden" class="form-control" name="palette" value="p1"required>
                     <section>
-                      <a href=\'#\' onclick=\'document.getElementById("f1").submit()\'>
-                      <div>
-                        <div class="box">
-                          <span></span>
-                          <span></span>
-                          <span></span>
-                          <span></span>
-                          <div class="content">
-                            <img src="style/palette_1.png"/>
-                          </div>
-                        </div>
-                      </div>
-                      </a>
+                        <a href=\'#\' onclick=\'document.getElementById("f1").submit()\'>
+                            <div>
+                                <div class="box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <div class="content">
+                                        <img src="style/palette_1.png"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </section>
-                    </form>
-
-                    <form id="f2" action="index.php?module=editeur&action=template" method="POST">
+                </form>
+                
+                <form id="f2" action="index.php?module=editeur&action=template" method="POST">
                     <input type="hidden" class="form-control" name="palette" value="p2"required>
                     <section>
-                      <div>
-                          <a href=\'#\' onclick=\'document.getElementById("f2").submit()\'>
-                          <div class="box">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <div class="content">
-                              <img src="style/palette_2.png">
+                        <a href=\'#\' onclick=\'document.getElementById("f2").submit()\'>
+                            <div>
+                                <div class="box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <div class="content">
+                                        <img src="style/palette_2.png">
+                                    </div>
+                                </div>
                             </div>
-                          </div>
-                      </div>
-                      </a>
+                        </a>
                     </section>
-                    </form>
-
-                    <form id="f3" action="index.php?module=editeur&action=template" method="POST">
+                </form>
+                
+                <form id="f3" action="index.php?module=editeur&action=template" method="POST">
                     <input type="hidden" class="form-control" name="palette" value="p3"required>
                     <section>
-                    <a href=\'#\' onclick=\'document.getElementById("f3").submit()\'>
-                     <div>
-                          <div class="box">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <div class="content">
-                              <img src="style/palette_3.png">
+                        <a href=\'#\' onclick=\'document.getElementById("f3").submit()\'>
+                            <div>
+                                <div class="box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <div class="content">
+                                        <img src="style/palette_3.png">
+                                    </div>
+                                </div>
                             </div>
-                          </div>
-                      </div>
-                      </a>
+                        </a>
                     </section>
-                    </form>
+                </form>
 
 
-                    <form id="f4" action="index.php?module=editeur&action=template" method="POST">
+                <form id="f4" action="index.php?module=editeur&action=template" method="POST">
                     <input type="hidden" class="form-control" name="palette" value="p4"required>
                     <section>
-                      <a href=\'#\' onclick=\'document.getElementById("f4").submit()\'>
-                      <div>
-                          <div class="box">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <div class="content">
-                              <img src="style/palette_4.png">
+                        <a href=\'#\' onclick=\'document.getElementById("f4").submit()\'>
+                            <div>
+                                <div class="box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <div class="content">
+                                        <img src="style/palette_4.png">
+                                    </div>
+                                </div>
                             </div>
-                          </div>
-                      </div>
-                      </a>
+                        </a>
                     </section>
-                    </form>
-
-                    <form id="f5" action="index.php?module=editeur&action=template" method="POST">
+                </form>
+                
+                <form id="f5" action="index.php?module=editeur&action=template" method="POST">
                     <input type="hidden" class="form-control" name="palette" value="p5"required>
                     <section>
-                      <a href=\'#\' onclick=\'document.getElementById("f5").submit()\'>
-                      <div>
-                          <div class="box">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <div class="content">
-                              <img src="style/palette_5.png">
+                        <a href=\'#\' onclick=\'document.getElementById("f5").submit()\'>
+                            <div>
+                                <div class="box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <div class="content">
+                                        <img src="style/palette_5.png">
+                                    </div>
+                                </div>
                             </div>
-                          </div>
-                      </div>
-                      </a>
+                        </a>
                     </section>
-                    </form>
-                </div>
+                </form>
             </div>
-            ';
+        </div>';
         }
 
-		public function getTemplate(){
-      var_dump($_POST['palette']);
-      var_dump($_POST['template']);
-      echo'
+    public function getTemplate(){
+        var_dump($_POST['palette']);
+        var_dump($_POST['template']);
+        echo'
         <div class="container">
-          <div class="header">
-              <div class="logo">
-                  <a href="index.php" id="title" class="wave"><img src="images/logo.png" alt="">FOLLIOWAVE</a>
-              </div>
-              <div class="navlist">
-                  <p><a href="#" class="wave" id="contactLink">CONTACT</a></p>
-              </div>
-          </div>
+            <div class="header">
+                <div class="logo">
+                    <a href="index.php" id="title" class="wave"><img src="images/logo.png" alt="">FOLLIOWAVE</a>
+                </div>
+                <div class="navlist">
+                    <p><a href="index.php#contact" class="wave" id="contactLink">CONTACT</a></p>
+                </div>
+            </div>
 
-          <div class="center">
-              <form id="f1" action="index.php?module=editeur&action=template" method="POST">
-              <input type="hidden" class="form-control" name="template" value="t1"required>
-              <section>
-                  <a href=\'#\' onclick=\'document.getElementById("f1").submit()\'>
-                      <div>
-                          <div class="box">
-                              <span></span>
-                              <span></span>
-                              <span></span>
-                              <span></span>
-                              <div class="content">
-                                  <img src="template/t1.png" />
-                              </div>
-                          </div>
-                      </div>
-                  </a>
-              </section>
-              </form>
+            <div class="center">
+                <form id="f1" action="index.php?module=editeur&action=form" method="POST">
+                    <input type="hidden" class="form-control" name="template" value="t1"required>
+                    <section
+                        <a href=\'#\' onclick=\'document.getElementById("f1").submit()\'>
+                            <div>
+                                <div class="box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <div class="content">
+                                        <img src="template/t1.png" />
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </section>
+                </form>
 
-              <form id="f2" action="index.php?module=editeur&action=template" method="POST">
-              <input type="hidden" class="form-control" name="template" value="t2"required>
-              <section>
-                  <a href=\'#\' onclick=\'document.getElementById("f2").submit()\'>
-                      <div>
-                          <div class="box">
-                              <span></span>
-                              <span></span>
-                              <span></span>
-                              <span></span>
-                              <div class="content">
-                                  <img src="template/t2.png">
-                              </div>
-                          </div>
-                      </div>
-                  </a>
-              </section>
-              </form>
+                <form id="f2" action="index.php?module=editeur&action=form" method="POST">
+                    <input type="hidden" class="form-control" name="template" value="t2"required>
+                    <section>
+                        <a href=\'#\' onclick=\'document.getElementById("f2").submit()\'>
+                            <div>
+                                <div class="box">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <div class="content">
+                                    <img src="template/t2.png">
+                                </div>
+                            </div>
+                        </a>
+                    </section>
+                </form>
 
-              <form id="f3" action="index.php?module=editeur&action=template" method="POST">
-              <input type="hidden" class="form-control" name="template" value="t3"required>
-              <section>
-                  <a href=\'#\' onclick=\'document.getElementById("f3").submit()\'>
-                      <div>
-                          <div class="box">
-                              <span></span>
-                              <span></span>
-                              <span></span>
-                              <span></span>
-                              <div class="content">
-                                  <img src="template/t3.png">
-                              </div>
-                          </div>
-                      </div>
-                  </a>
-              </section>
-              <a href="https://www.cssparty.com/"  target="_blank">cssparty.com</a>
-              </form>';
+                <form id="f3" action="index.php?module=editeur&action=form" method="POST">
+                    <input type="hidden" class="form-control" name="template" value="t3"required>
+                    <section>
+                        <a href=\'#\' onclick=\'document.getElementById("f3").submit()\'>
+                            <div>
+                                <div class="box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <div class="content">
+                                        <img src="template/t3.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </section>
+                </form>
+            </div>
+        </div>';
 		}
     
-		public function getForm(){
-      echo'
-            <form action="#" method="post">
-              <input type="text" name="nom" placeholder="nom" required>
-              <input type="text" name="prenom" placeholder="prenom" required>
-              <input type="file" name="logo" id="fileUpload">
-              <input type="file" name="image1" id="fileUpload">
-              <textarea name="texte1" placeholder="Introduction de votre portfolio" required>
-              <input type="file" name="image2" id="fileUpload">
-              <input type="text" name="l1" placeholder="Liens vers votre projet 1" required>
-              <input type="file" name="imageP1" id="fileUpload">
-              <input type="text" name="l2" placeholder="Liens vers votre projet 2" required>
-              <input type="file" name="imageP2" id="fileUpload">
-              <input type="text" name="l3" placeholder="Liens vers votre projet 3" required>
-              <input type="file" name="imageP3" id="fileUpload">
-              <input type="text" name="l4" placeholder="Liens vers votre projet 4" required>
-              <input type="file" name="imageP4" id="fileUpload">
-              <textarea name="texte2" placeholder="Petit texte de contact" required>
-              <input type="file" name="image3" id="fileUpload">
-              <input type="text" name="lkn" placeholder="Liens vers votre linkedin" required>
-              <input type="text" name="fb" placeholder="Liens vers votre Facebook" required>
-              <input type="text" name="twt" placeholder="Liens vers votre twitter" required>
+    public function getForm(){
+        //initialise une var de session avec un token random pour la suite du traitement du form
+        if(!isset($_SESSION['token'])) $_SESSION['token']=random_int(0, 100);
+        echo'
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <a href="index.php" id="title" class="wave"><img src="images/logo.png" alt="">FOLLIOWAVE</a>
+                </div>
+                <div class="navlist">
+                    <p><a href="index.php#contact" class="wave" id="contactLink">CONTACT</a></p>
+                </div>
+            </div>
+            
+            <form action="index.php?module=editeur&action=upload" method="post" enctype="multipart/form-data">
+                <div class="left">
+                    <input type="text" name="nom" placeholder="nom" required>
+                </div>
+                <div class="right">
+                    <input type="text" name="prenom" placeholder="prenom" required>
+                </div>
+                
+                <div class="left">
+                    <label for="logo">Logo:</label><br/>
+                    <input type="file" name="logo">
+                </div>
+                    
+                <div class="right">
+                    <label for="image1">Image de couverture:</label><br/>
+                    <input type="file" name="image1" id="image1">
+                </div>
+                
+                <div class="texte">
+                    <textarea name="texte1" required placeholder="decrivez votre portfolio brievement"></textarea>
+                    <div>
+                        <label for="image2">Image 2:</label></br>
+                        <input type="file" name="image2" id="image2" id="test">
+                    </div>
+                </div>
+                
+                <div class="left">
+                    <label for="imageP1">Image projet 1:</label><br/>
+                    <input type="file" name="imageP1" id="imageP1"><br/>
+                    <input type="text" name="l1" placeholder="Liens vers votre projet 1" required>          
+                </div>
+                
+                <div class="right">
+                    <label for="imageP2">Image projet 2:</label><br/>
+                    <input type="file" name="imageP2" id="imageP2"><br/>
+                    <input type="text" name="l2" placeholder="Liens vers votre projet 2" required>
+                </div>
+                
+                <div class="left">
+                    <label for="imageP3">Image projet 3:</label><br/>
+                    <input type="file" name="imageP3" id="imageP3"><br/>
+                    <input type="text" name="l3" placeholder="Liens vers votre projet 3" required>
+                </div>
+                
+                <div class="right">
+                    <label for="imageP4">Image projet 4:</label><br/>
+                    <input type="file" name="imageP4" id="imageP4"><br/>
+                    <input type="text" name="l4" placeholder="Liens vers votre projet 4" required>
+                </div>
+                
+                <div class="texte">
+                    <textarea name="texte2" placeholder="Petit texte de contact" required></textarea>
+                    <div>
+                        <label for="image3">Image 3:</label><br/>
+                        <input type="file" name="image3" id="image3">
+                    </div>
+                </div>
+                
+                <div id="social">
+                    <input type="text" name="lkn" placeholder="Liens vers votre linkedin" required>
+                    <input type="text" name="fb" placeholder="Liens vers votre Facebook" required>
+                    <input type="text" name="twt" placeholder="Liens vers votre twitter" required>
+                </div>
+                
+                <center>
+                    <input type="submit" name="submit" value="Upload">
+                </center>
             </form>
-          ';
-		}
-
-    public function getPreview(){
-
+        </div>';
     }
-/*
-    public function uploadTest(){
-      echo'
-        <form action="index.php?module=editeur&action=upload" method="post" enctype="multipart/form-data">
-        <h2>Upload Fichier</h2>
-        <label for="fileUpload">Fichier:</label>
-        <input type="file" name="photo" id="fileUpload">
-        <input type="submit" name="submit" value="Upload">
-        <p><strong>Note:</strong> Seuls les formats .jpg, .jpeg, .jpeg, .gif, .png sont autorisés jusqu\'à une taille maximale de 5 Mo.</p>
-        </form>
-      ';
-    }*/
-  }
+}
 ?>

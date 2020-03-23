@@ -17,7 +17,7 @@
                     <a href="#" id="title" class="wave"><img src="test/logo.png" alt="">FOLLIOWAVE</a>
                 </div>
                 <div class="navlist">
-                    <p><a href="#" class="wave" id="teste">CONTACT</a></p>
+                    <p><a href="#contact" class="wave" id="teste">CONTACT</a></p>
                 </div>
             </div>
             <div id="essai">
