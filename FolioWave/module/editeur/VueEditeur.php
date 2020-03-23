@@ -209,59 +209,45 @@
 		}
     
 		public function getForm(){
-            //initialise une var de session avec un token random pour la suite du traitement du form
-            if(!isset($_SESSION['token'])) $_SESSION['token']=random_int(0, 100);
-
-            echo'
-                <form action="index.php?module=editeur&action=upload" method="post" enctype="multipart/form-data">
-                  <input type="text" name="nom" placeholder="nom" required>
-                  <input type="text" name="prenom" placeholder="prenom" required>
-                  
-                  <label for="logo">Logo:</label>
-                  <input type="file" name="logo" id="logo">
-                 
-                  <label for="image1">Image de couverture:</label>
-                  <input type="file" name="image1" id="image1">                  
-                  
-                  <label for="image2">Image 2:</label>
-                  <input type="file" name="image2" id="image2">
-                  
-                  <textarea name="texte1" required placeholder="decrivez votre portfolio brievement"></textarea>
-            
-                  <input type="text" name="l1" placeholder="Liens vers votre projet 1" required>
-                    
-                  <label for="imageP1">image projet 1:</label>
-                  <input type="file" name="imageP1" id="imageP1">
-                  
-                  <input type="text" name="l2" placeholder="Liens vers votre projet 2" required>
-
-                  <label for="imageP2">image projet 2:</label>
-                  <input type="file" name="imageP2" id="imageP2">
-                  
-                  <input type="text" name="l3" placeholder="Liens vers votre projet 3" required>
-
-                  <label for="imageP3">image projet 3:</label>
-                  <input type="file" name="imageP3" id="imageP3">
-                  
-                  <input type="text" name="l4" placeholder="Liens vers votre projet 4" required>
-                  
-                  <label for="imageP4">image projet 4:</label>
-                  <input type="file" name="imageP4" id="imageP4">
-                  
-                  <textarea name="texte2" placeholder="Petit texte de contact" required></textarea>
-
-                  <label for="image3">image 3:</label>
-                  <input type="file" name="image3" id="image3">
-                  
-                  <input type="text" name="lkn" placeholder="Liens vers votre linkedin" required>
-                  
-                  <input type="text" name="fb" placeholder="Liens vers votre Facebook" required>
-                  
-                  <input type="text" name="twt" placeholder="Liens vers votre twitter" required>
-                          <input type="submit" name="submit" value="Upload">
-
-                </form>
-              ';
+      echo'
+            <form action="#" method="post">
+              <input type="text" name="nom" placeholder="nom" required>
+              <input type="text" name="prenom" placeholder="prenom" required>
+              <input type="file" name="logo" id="fileUpload">
+              <input type="file" name="image1" id="fileUpload">
+              <textarea name="texte1" placeholder="Introduction de votre portfolio" required>
+              <input type="file" name="image2" id="fileUpload">
+              <input type="text" name="l1" placeholder="Liens vers votre projet 1" required>
+              <input type="file" name="imageP1" id="fileUpload">
+              <input type="text" name="l2" placeholder="Liens vers votre projet 2" required>
+              <input type="file" name="imageP2" id="fileUpload">
+              <input type="text" name="l3" placeholder="Liens vers votre projet 3" required>
+              <input type="file" name="imageP3" id="fileUpload">
+              <input type="text" name="l4" placeholder="Liens vers votre projet 4" required>
+              <input type="file" name="imageP4" id="fileUpload">
+              <textarea name="texte2" placeholder="Petit texte de contact" required>
+              <input type="file" name="image3" id="fileUpload">
+              <input type="text" name="lkn" placeholder="Liens vers votre linkedin" required>
+              <input type="text" name="fb" placeholder="Liens vers votre Facebook" required>
+              <input type="text" name="twt" placeholder="Liens vers votre twitter" required>
+            </form>
+          ';
 		}
+
+    public function getPreview(){
+
+    }
+/*
+    public function uploadTest(){
+      echo'
+        <form action="index.php?module=editeur&action=upload" method="post" enctype="multipart/form-data">
+        <h2>Upload Fichier</h2>
+        <label for="fileUpload">Fichier:</label>
+        <input type="file" name="photo" id="fileUpload">
+        <input type="submit" name="submit" value="Upload">
+        <p><strong>Note:</strong> Seuls les formats .jpg, .jpeg, .jpeg, .gif, .png sont autorisés jusqu\'à une taille maximale de 5 Mo.</p>
+        </form>
+      ';
+    }*/
   }
 ?>

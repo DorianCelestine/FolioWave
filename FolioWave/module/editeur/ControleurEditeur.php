@@ -22,17 +22,12 @@
 			return $this->vue->getPreview();
 		}
 
-        public function getForm(){
-            return $this->vue->getForm();
-        }
+		public function uploadTestA(){
+			return $this->vue->uploadTest();
+		}
 
-		public function upload(){
-		    $fields = array("logo", "image1", "image2", "imageP1", "imageP2", "imageP3", "imageP4", "image3");
-            $i=0;
-            foreach ($fields as &$value) {
-                $this->mod->upload($value);
-            }
-            unset($value);
+		public function uploadTestB(){
+			$this->mod->uploadTest();
 		}
 	}
 ?>
