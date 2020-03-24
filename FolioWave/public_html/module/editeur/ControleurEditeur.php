@@ -27,12 +27,14 @@
         }
 
 		public function upload(){
+            $this->mod->Dossier();
+            $this->mod->htmlFichier();
+            $this->mod->cssFichier();
+
 		    $fields = array("logo", "image1", "image2", "imageP1", "imageP2", "imageP3", "imageP4", "image3");
-            $i=0;
             foreach ($fields as &$value) {
                 $this->mod->upload($value);
             }
-            unset($value);
 		}
 	}
 ?>
