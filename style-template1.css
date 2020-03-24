@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    color: white;
+}
+
+/*******************************************/
+
+#page1 {
+    width: 100%;
+    height: 100%;
+}
+
+#texte1 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #525252; /* première couleur de la palette */
+    text-align: center;
+}
+
+h1 {
+    margin-top: 2%;
+}
+
+#texte1 p {
+    margin-top: 2%;
+    font-size: 20px;
+}
+
+#img0 {
+    width: 9vw;
+    height: 9vw;
+    margin-top: 5%;
+}
+
+#page1Img {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 50%;
+    display: inline-block;
+}
+
+/*******************************************/
+
+#page2 {
+    width: 100%;
+    height: 100%;
+    background-color: #525252; /* première couleur de la palette */
+}
+
+#texte2 {
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    color: #ec625f; /* dernière couleur de la palette */
+    font-size: 25px;
+    font-family: verdana;
+    display: inline-block;
+}
+
+#texte2 p {
+    width: 100%;
+    height: 60%;
+    margin-top: 5%;
+}
+
+#imgPage2 {
+    width: 100%;
+    height: 50%;
+    text-align: center;
+}
+
+#page2Image {
+    width: 40%;
+    height: 100%;
+}
+
+/*******************************************/
+
+#page3 {
+    width: 100%;
+    height: 100%;
+    background-color: #ec625f; /* dernière couleur de la palette */
+    display: inline-block;
+}
+
+#bloc3 {
+    width: 80%;
+    height: 90%;
+    background-color: #313131; /* troisième couleur de la palette */
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: inline-block;
+}
+
+#bloc3left {
+    display: inline-block;
+    width: 49.5%;
+    height: 100%;
+}
+
+#img3Lleft {
+    width: 48%;
+    height: 100%;
+    display: inline-block;
+    margin-right: 3%;
+}
+
+#img3Lright {
+    width: 48%;
+    height: 100%;
+    display: inline-block;
+}
+
+#bloc3right {
+    width: 49.5%;
+    height: 100%;
+    float: right;
+}
+
+#img3Rleft {
+    width: 100%;
+    height: 48%;
+    display: inline-block;
+    margin-bottom: 4%;
+}
+
+#img3Rright {
+    width: 100%;
+    height: 48%;
+    display: inline-block;
+}
+
+/*******************************************/
+
+#page4 {
+    width: 100%;
+    height: 100%;
+    background-color: #313131; /* troisième couleur de la palette */
+}
+
+#corps4 {
+    width: 100%;
+    height: 90%;
+}
+
+#left4 {
+    width: 40%;
+    height: 90%;
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+}
+
+#img4 {
+    width: 20vw;
+    height: 20vw;
+    display: inline-block;
+    margin-top: 25%;
+}
+
+#right4 {
+    width: 59%;
+    height: 100%;
+    float: right;
+    text-align: center;
+}
+
+#right4 h1 {
+    margin-top: 15%;
+    margin-bottom: 5%;
+    font-size: 40px;
+	font-family: verdana;
+}
+
+#right4 p {
+    margin-top: 15%;
+    font-size: 30px;
+	font-family: verdana;
+}
+
+.p4img {
+    width: 3vw;
+    height: 3vw;
+    display: inline-block;
+    margin-right: 5%;
+    margin-top: 15%;
+}
+
+#footer4 {
+    width: 100%;
+    height: 10%;
+    background-color: #ec625f; /* dernière couleur de la palette */
+    text-align: center;
+}
+
+#footer4 p {
+    color: #313131; /* troisième couleur de la palette */
+    font-size: 25px;
+    font-family: verdana;
+}
