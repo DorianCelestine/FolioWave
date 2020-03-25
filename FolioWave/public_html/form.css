@@ -14,6 +14,10 @@ form {
     text-align: center;
 }
 
+.right textarea {
+    height: 7.5vh;
+}
+
 .left div {
     text-align: center;
     float: right;

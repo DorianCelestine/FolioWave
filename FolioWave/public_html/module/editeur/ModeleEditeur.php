@@ -91,77 +91,80 @@
          */
         public function Html1(){
             return '
-                   <body>
-                        <section>
-                            <div id="page1">
-                                <div id="texte1">
-                                    <img id="img0" src="'.$_SESSION['logo'].'"/>
-                                    <h1>'.$_POST['nom'].' '.$_POST['prenom'].'</h1>
-                                </div>
-                                <img id="page1Img" src="'.$_SESSION['image1'].'"/>
+            <body>
+                <section>
+                    <div id="page1">
+                        <div id="texte1">
+                            <img id="img0" src="'.$_SESSION['logo'].'"/>
+                            <h1>'.$_POST['nom'].' '.$_POST['prenom'].'</h1>
+                            <p>'.$_POST['texte1'].'</p>
+                        </div>
+                        <img id="page1Img" src="'.$_SESSION['image1'].'"/>
+                    </div>
+                    
+                    <div id="page2">
+                        <div id="texte2">
+                            <p> <!-- presentation de la personne -->
+                            '.$_POST['texte2'].'
+                            </p>
+                        </div>
+                        <div id="imgPage2">
+                            <img id="page2Image" src="'.$_SESSION['image2'].'"/>
+                        </div>
+                    </div>
+                    
+                    <div id="page3">
+                        <div id="bloc3">
+                            <div id="bloc3left">
+                                <a href="'.$_POST['l1'].'">
+                                    <img id="img3Lleft" src="'.$_SESSION['imageP1'].'"/>
+                                </a>
+                                <a href="'.$_POST['l2'].'">
+                                    <img id="img3Lright" src="'.$_SESSION['imageP2'].'"/>
+                                </a>
                             </div>
-                           <div id="page2">
-                                <div id="texte2">
-                                    <p> <!-- presentation de la personne -->
-                                        '.$_POST['texte1'].'
-                                    </p>
-                                </div>
-                                <div id="imgPage2">
-                                    <img id="page2Image" src="'.$_SESSION['image2'].'"/>
-                                </div>
+                            <div id="bloc3right">
+                                <a href="'.$_POST['l3'].'">
+                                    <img id="img3Rleft" src="'.$_SESSION['imageP3'].'"/>
+                                </a>
+                                <a href="'.$_POST['l4'].'">
+                                    <img id="img3Rright"src="'.$_SESSION['imageP4'].'"/>
+                                </a>
                             </div>
-                            <div id="page3">
-                                <div id="bloc3">
-                                    <div id="bloc3left">
-                                        <a href="'.$_POST['l1'].'">
-                                            <img id="img3Lleft" src="'.$_SESSION['imageP1'].'"/>
-                                        </a>
-                                        <a href="'.$_POST['l2'].'">
-                                            <img id="img3Lright" src="'.$_SESSION['imageP2'].'"/>
-                                        </a>
-                                    </div>
-                                    <div id="bloc3right">
-                                        <a href="'.$_POST['l3'].'">
-                                            <img id="img3Rleft" src="'.$_SESSION['imageP3'].'"/>
-                                        </a>
-                                        <a href="'.$_POST['l4'].'">
-                                            <img id="img3Rright"src="'.$_SESSION['imageP4'].'"/>
-                                        </a>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    
+                    <div id="page4">
+                        <div id="corps4">
+                            <div id="left4">
+                                <img id="img4" src="'.$_SESSION['image3'].'"/>
                             </div>
-                            <div id="page4">
-                                <div id="corps4">
-                                    <div id="left4">
-                                        <img id="img4" src="'.$_SESSION['image3'].'"/>
-                                    </div>
-                                    <div id="right4">
-                                        <h1>Contactez moi</h1>
-                                        <p>'.$_POST['texte2'].'</p>
-                                        <a id="sonFB" href="'.$_POST['fb'].'">
-                                            <img class="p4img" src="fb.png"/>
-                                        </a>
-                                        <a id="sonIN" hhref="'.$_POST['lkn'].'">
-                                            <img class="p4img" src="in.png"/>
-                                        </a>
-                                        <a id="sonTW" href="'.$_POST['twt'].'">
-                                            <img class="p4img" src="tw.png"/>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div id="footer4">
-                                    <p>footer</p>
-                                </div>
+                            <div id="right4">
+                                <h1>Contactez moi</h1>
+                                <p>'.$_POST['texte3'].'</p>
+                                <a id="sonFB" href="'.$_POST['fb'].'">
+                                    <img class="p4img" src="fb.png"/>
+                                </a>
+                                <a id="sonIN" hhref="'.$_POST['lkn'].'">
+                                    <img class="p4img" src="in.png"/>
+                                </a>
+                                <a id="sonTW" href="'.$_POST['twt'].'">
+                                    <img class="p4img" src="tw.png"/>
+                                </a>
                             </div>
-                        </section>
-                    </body>
-                    </html> 
-            ';
+                        </div>
+                        <div id="footer4">
+                            <p>footer</p>
+                        </div>
+                    </div>
+                </section>
+            </body>
+        </html>';
         }
         
         public function Html2(){
             return '
-                <body>
+            <body>
                 <header>
                     <p>'.$_POST['nom'].' '.$_POST['prenom'].'</p>
                     <img src="'.$_SESSION['logo'].'"/>
@@ -175,11 +178,11 @@
                             <img id="img1" src="'.$_SESSION['image1'].'"/>
                         </div>
                     </div>
+                    
                     <div class="page">
                         <img id="imgP2" src="'.$_SESSION['image2'].'"/>
                         <div id="rightP2">
-                            <p> présentation</p>
-            
+                            <p>'.$_POST['texte2']'</p>
                             <a id="sonFB"href="'.$_POST['fb'].'">
             					<img class="p2img" src="fb.png"/>
             				</a>
@@ -191,6 +194,7 @@
             				</a>
                         </div>
                     </div>
+                    
                     <div class="page" id="p3">
                         <div id="left3">
                             <a href="'.$_POST['l1'].'">
@@ -215,7 +219,7 @@
                                 <img id="img4"  src="'.$_SESSION['image3'].'"/>
                             </div>
                             <div id="bottom4">
-                                <p>'.$_POST['texte2'].'</p>
+                                <p>'.$_POST['texte3'].'</p>
                             </div>
                         </div>
                         <div id="footer">
@@ -224,12 +228,91 @@
                     </div>
                 </section>
             </body>
-            </html>
-            ';
+            </html>';
         }
         
         public function Html3(){
-            return "";
+            return '
+            <body>
+                <header>
+                    <ul>
+                        <li id="listLogo">
+                            <img src="'.$_SESSION['logo'].'"/>
+                        </li>
+                        <li id="listReseaux">
+                            <a id="sonFB" href="'.$_POST['fb'].'">
+                                <img src="fb.png"/>
+                            </a>
+                            <a id="sonIN" href="'.$_POST['lkn'].'">
+                                <img src="in.png"/>
+                            </a>
+                            <a id="sonTW" href="'.$_POST['twt'].'">
+                                <img src="tw.png"/>
+                            </a>
+                        </li>
+                    </ul>
+                </header>
+                
+                <section>
+                    <div id="page1">
+                        <div id="left1">
+                            <div id="titre">
+                                <p>'.$_POST['nom'].' '.$_POST['prenom'].'</p>
+				            </div>
+                            <div id="texte1"><!-- phrase d\'accroche ou autre barratin d\'intro -->
+					           <p>'.$_POST['texte1'].'</p>
+                            </div>
+                        </div>
+                        <img id="right1" src="'.$_SESSION['image1'].'"/>
+                    </div>
+                    
+                    <div id="page2">
+                        <div id="top1">
+                            <div id="texte2"><!-- presentation de la personne -->
+                                <p>'.$_POST['texte2'].'</p>
+                            </div>
+                        </div>
+                        <img id="bottom1" src="'.$_SESSION['image2'].'">
+                    </div>
+                    
+                    <div id="page3">
+                        <div id="proj1">
+                            <a href="'.$_POST['l1'].'">
+                                <img id="projet1" src="'.$_SESSION['imageP1'].'">
+                            </a>
+                        </div>
+                        <div id="othersProjs">
+                            <div id="topProjs">
+                                <a href="'.$_POST['l2'].'">
+                                    <img id="projet2" src="'.$_SESSION['imageP2'].'">
+                                </a>
+                                <a href="'.$_POST['l3'].'">
+                                    <img id="projet3" src="'.$_SESSION['imageP3'].'">
+                                </a>
+				            </div>
+                            <div id="bottomProjs">
+                                <a href="'.$_POST['l4'].'">
+                                    <img id="projet4" src="'.$_SESSION['imageP4'].'">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="page4">
+                        <img id="left2" src="'.$_SESSION['image3'].'"/>
+                        <div id="middle">
+                            <p>'.$_POST['texte3'].'</p>
+                        </div>
+                        <div id="right2">
+				            <div id="vide"></div>
+				            <a href="#page1">
+					           <img id="logoFooter" src="remonter.png"/>
+				            </a>
+			             </div>
+                    </div>
+                </section>
+            </body>
+        </html>';
         }
         
         public function style1(){
@@ -795,9 +878,16 @@
                     }
                     
                     #middle {
-                    	width: 64%;
+                    	width: 63%;
                     	height: 100%;
                     	display: inline-block;
+                        text-align : center;
+                    }
+                    
+                    #middle p {
+                        font-size: 25px;
+                        font-family: verdana;
+                        display: inline-block;
                     }
                     
                     #right2 {

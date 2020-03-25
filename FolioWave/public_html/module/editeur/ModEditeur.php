@@ -16,7 +16,6 @@
                 case 'upload':
                     $ctrl->upload();
                     $text= file_get_contents('Dossiers/'.$_SESSION['dossier'].'/index.html');
-
                     echo $text ;
                     break;
                 case 'form':

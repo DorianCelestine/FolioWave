@@ -133,8 +133,6 @@ class VueEditeur {
         }
 
     public function getTemplate(){
-        var_dump($_POST['palette']);
-        var_dump($_POST['template']);
         echo'
         <div class="container">
             <div class="header">
@@ -222,10 +220,11 @@ class VueEditeur {
             
             <form action="index.php?module=editeur&action=upload" method="post" enctype="multipart/form-data">
                 <div class="left">
-                    <input type="text" name="nom" placeholder="nom" required>
+                    <input type="text" name="nom" placeholder="nom" required><br/>
+                    <input type="text" name="prenom" placeholder="prenom" required>
                 </div>
                 <div class="right">
-                    <input type="text" name="prenom" placeholder="prenom" required>
+                    <textarea name="texte1" required placeholder="Phrase d\'accroche"></textarea>
                 </div>
                 
                 <div class="left">
@@ -239,7 +238,7 @@ class VueEditeur {
                 </div>
                 
                 <div class="texte">
-                    <textarea name="texte1" required placeholder="decrivez votre portfolio brievement"></textarea>
+                    <textarea name="texte2" required placeholder="decrivez votre portfolio brievement"></textarea>
                     <div>
                         <label for="image2">Image 2:</label></br>
                         <input type="file" name="image2" id="image2" id="test">
@@ -271,7 +270,7 @@ class VueEditeur {
                 </div>
                 
                 <div class="texte">
-                    <textarea name="texte2" placeholder="Petit texte de contact" required></textarea>
+                    <textarea name="texte3" placeholder="Petit texte de contact" required></textarea>
                     <div>
                         <label for="image3">Image 3:</label><br/>
                         <input type="file" name="image3" id="image3">
