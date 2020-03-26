@@ -4,21 +4,22 @@
 	{
 		function __construct()
  	    {
-     		$ctrl = new ControleurEditeur();
+            $ctrl = new ControleurEditeur();
      		$action = isset($_GET['action']) ? $_GET['action']:null;
      		switch ($action) {
                 case 'palette':
+                    session_unset();
                     $ctrl->getPalette();
                     break;
      		    case 'template':
+     		        $_SESSION['palette']=$_POST['palette'];
      		        $ctrl->getTemplate();
                     break;
                 case 'upload':
                     $ctrl->upload();
-                    $text= file_get_contents('Dossiers/'.$_SESSION['dossier'].'/index.html');
-                    echo $text ;
                     break;
                 case 'form':
+                    $_SESSION['template']=$_POST['template'];
                     $ctrl->getForm();
      			    break;
      			default:

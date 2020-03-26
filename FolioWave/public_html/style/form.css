@@ -1,5 +1,8 @@
+
 form {
+    display:block;
     margin-top: 3vh;
+    max-height:80vh;
 }
 
 .left {
@@ -10,12 +13,9 @@ form {
 
 .right {
     float: right;
+    display:block;
     margin-right: 10vw;
     text-align: center;
-}
-
-.right textarea {
-    height: 7.5vh;
 }
 
 .left div {
@@ -24,6 +24,7 @@ form {
     margin-right: 10vw;
     margin-top: 3vh;
 }
+
 
 .texte {
     display: block;
@@ -47,4 +48,7 @@ form {
 
 label {
     color: azure;
+}
+#ta{
+    height:5vh;
 }

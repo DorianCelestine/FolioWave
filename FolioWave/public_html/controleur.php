@@ -16,6 +16,7 @@
 		
 		public function sendMail(){
 		    $this->mod->sendMail();
+		    $this->vue->getBody();
 		}
 	}
 ?>

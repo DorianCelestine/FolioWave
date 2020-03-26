@@ -7,25 +7,26 @@
          * Récupère les bonne couleurs pour le CSS et les mets en var de Session
          */
         public function paletteToSession(){
-            if($_POST['palette']="p1"){
+            
+            if($_SESSION['palette']=="p1"){
                 $_SESSION['coul1']="#525252";
                 $_SESSION['coul2']="#414141";
                 $_SESSION['coul3']="#313131";
                 $_SESSION['coul4']="#ec625f";
             }
-            else if($_POST['palette']="p2"){
+            else if($_SESSION['palette']=="p2"){
                 $_SESSION['coul1']="#022c43";
                 $_SESSION['coul2']="#053f5e";
                 $_SESSION['coul3']="#115173";
                 $_SESSION['coul4']="#ffd700";
             }
-            else if($_POST['palette']="p3"){
+            else if($_SESSION['palette']=="p3"){
                 $_SESSION['coul1']="#eeeeee";
                 $_SESSION['coul2']="#dedede";
                 $_SESSION['coul3']="#ff4949";
                 $_SESSION['coul4']="#c10000";
             }
-            else if($_POST['palette']="p4"){
+            else if($_SESSION['palette']=="p4"){
                 $_SESSION['coul1']="#494ca2";
                 $_SESSION['coul2']="#8186d5";
                 $_SESSION['coul3']="#c6cbef";
@@ -44,9 +45,9 @@
          */
         public function cssFichier(){
             $this->paletteToSession();
-            if($_POST['template']=="t1"){
+            if($_SESSION['template']=="t1"){
                 $code = $this->style1();
-            }else if($_POST['template']=="t2"){
+            }else if($_SESSION['template']=="t2"){
                 $code = $this->style2();
             }else{
                 $code = $this->style3();
@@ -57,7 +58,20 @@
             fclose($handle);
         }
         
-        
+        public function copieImages(){
+            $f1 = 'StoredImages/fb.png';
+            $f2 = 'StoredImages/in.png';
+            $f3 = 'StoredImages/remonter.png';
+            $f4 = 'StoredImages/tw.png';
+            $nf1 = 'Dossiers/'.$_SESSION['dossier'].'/fb.png';
+            $nf2 = 'Dossiers/'.$_SESSION['dossier'].'/in.png';
+            $nf3 = 'Dossiers/'.$_SESSION['dossier'].'/remonter.png';
+            $nf4 = 'Dossiers/'.$_SESSION['dossier'].'/tw.png';
+            copy($f1, $nf1);
+            copy($f2, $nf2);
+            copy($f3,$nf3);
+            copy($f4,$nf4);
+        }
         /*
          * Creer le fichier HTML pour l'utilisateur
          */
@@ -67,15 +81,15 @@
                     <head>
                         <meta charset="UTF-8">
                         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                        <title>tittle</title>
+                        <title>PortFolio '.$_POST['nom'].' '.$_POST['prenom'].'</title>
                         <link rel="stylesheet" href="style.css">
                         <link href="https://fonts.googleapis.com/css?family=Ubuntu:700&display=swap" rel="stylesheet">
                     </head>';
             
             
-            if($_POST['template']=="t1"){
+            if($_SESSION['template']=="t1"){
                 $code= $code. $this->Html1();
-            }else if($_POST['template']=="t2"){
+            }else if($_SESSION['template']=="t2"){
                 $code= $code. $this->Html2();
             }else{
                 $code= $code. $this->Html3();
@@ -154,7 +168,7 @@
                             </div>
                         </div>
                         <div id="footer4">
-                            <p>footer</p>
+                            <p>© '. date('Y').' '.$_POST['nom'].' '.$_POST['prenom'].'</p>
                         </div>
                     </div>
                 </section>
@@ -182,7 +196,7 @@
                     <div class="page">
                         <img id="imgP2" src="'.$_SESSION['image2'].'"/>
                         <div id="rightP2">
-                            <p>'.$_POST['texte2']'</p>
+                            <p>'.$_POST['texte2'].'</p>
                             <a id="sonFB"href="'.$_POST['fb'].'">
             					<img class="p2img" src="fb.png"/>
             				</a>
@@ -223,7 +237,7 @@
                             </div>
                         </div>
                         <div id="footer">
-                            <p>footer</p>
+                            <p>© '. date('Y').' '.$_POST['nom'].' '.$_POST['prenom'].'</p>
                         </div>
                     </div>
                 </section>
@@ -947,6 +961,7 @@
                         $name.=$_SESSION['token'];
                         $name.= $_FILES[$nom]['name'];
                         $name = str_replace(' ', '', $name);
+                        $name=preg_replace('/[^A-Za-z0-9\-\.]/', '', $name);
                         //vérifie si il y a un doublon 
                         if(file_exists("Dossiers/".$_SESSION['dossier']."/" . $name)){
                             while(file_exists("Dossiers/".$_SESSION['dossier']."/" . $name)){
@@ -965,5 +980,48 @@
                 }
             }
         }
-	}
+        
+        function addzip($nomDossier) {
+            /*
+             * récupère la liste des fichiers d'un dossier puis les mets dans une liste.
+             */
+            $path = 'Dossiers/'.$nomDossier.'/';
+            $fileList = glob($path.'*');
+            $listeFichiers = array();
+            $size = strlen('Dossiers/') + strlen($nomDossier)+1;
+
+            foreach($fileList as $filename){
+               $filename = substr($filename, $size);
+               array_push($listeFichiers, $filename);
+            }
+            /*
+             *Creation du zip avec les fichiers a l'interieur
+             */
+            $zip = new ZipArchive;
+            $tmp_file = 'Dossiers/'.$nomDossier.'.zip';
+            if ($zip->open($tmp_file,  ZipArchive::CREATE)) {
+                foreach($listeFichiers as $fichier){
+                    $zip->addFile($path.$fichier, $fichier);
+                }
+                $zip->close();
+            } else {
+                echo 'Failed!';
+            }
+        }
+        
+        public function telecharger(){
+            header('Content-type: Dossiers/'.$_SESSION['dossier'].'.zip');
+            header('Content-Disposition: attachment; filename="public_html.zip"');
+            header("Content-length: " . filesize("Dossiers/".$_SESSION['dossier'].".zip"));
+            header("Pragma: no-cache");
+            header("Expires: 0");
+            ob_clean();
+            flush();
+            readfile("Dossiers/".$_SESSION['dossier'].".zip");
+            unlink("Dossiers/".$_SESSION['dossier'].".zip");
+            unlink("Dossiers/".$_SESSION['dossier']);
+            delete_directory("Dossiers/".$_SESSION['dossier']);
+            exit;
+        }
+    }
 ?>

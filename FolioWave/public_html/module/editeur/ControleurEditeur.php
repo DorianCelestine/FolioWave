@@ -26,15 +26,19 @@
             return $this->vue->getAff($this->vue->getForm());
         }
 
-		public function upload(){
-            $this->mod->Dossier();
-            $this->mod->htmlFichier();
-            $this->mod->cssFichier();
-
+	    public function upload(){
+           $this->mod->Dossier();
 		    $fields = array("logo", "image1", "image2", "imageP1", "imageP2", "imageP3", "imageP4", "image3");
             foreach ($fields as &$value) {
                 $this->mod->upload($value);
             }
+            $this->mod->htmlFichier();
+            $this->mod->cssFichier();
+            $this->mod->copieImages();
+            $this->mod->addzip($_SESSION['dossier']);
+            $this->mod->telecharger();
 		}
+		
+
 	}
 ?>

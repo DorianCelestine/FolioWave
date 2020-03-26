@@ -10,14 +10,14 @@
                     <meta http-equiv="X-UA-Compatible" content="ie=edge">
                     <title>FolioWave</title>
                     <script src="parallax.js"></script>
-                    <link rel="stylesheet" href="index-style.css">
+                    <link rel="stylesheet" href="style/index-style.css">
                 </head>
                 <body>
                     <main>
                         <div class="container">
                             <div class="header">
                                 <div class="logo">
-                                    <a href="index.php" id="title" class="wave"><img src="images/logo.png" alt="">FOLLIOWAVE</a>
+                                    <a href="index.php" id="title" class="wave"><img src="images/logo.png" alt="">FOLIOWAVE</a>
                                 </div>
                                 <div class="navlist">
                                     <p><a href="#contact" class="wave" id="contactLink">CONTACT</a></p>

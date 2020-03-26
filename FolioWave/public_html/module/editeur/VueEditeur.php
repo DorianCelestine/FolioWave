@@ -9,10 +9,10 @@ class VueEditeur {
                 <meta http-equiv="X-UA-Compatible" content="ie=edge">
                 <title>FolioWave</title>
                 <script src="parallax.js"></script>
-                <link rel="stylesheet" href="index-style.css">
-                <link rel="stylesheet" href="palette.css">
-                <link rel="stylesheet" href="animation.css">
-                <link rel="stylesheet" href="form.css">
+                <link rel="stylesheet" href="style/index-style.css">
+                <link rel="stylesheet" href="style/palette.css">
+                <link rel="stylesheet" href="style/animation.css">
+                <link rel="stylesheet" href="style/form.css">
             </head>
                     
             <body>'.$contenu.'</body>
@@ -24,7 +24,7 @@ class VueEditeur {
         <div class="container">
             <div class="header">
                 <div class="logo">
-                    <a href="index.php" id="title" class="wave"><img src="images/logo.png" alt="">FOLLIOWAVE</a>
+                    <a href="index.php" id="title" class="wave"><img src="images/logo.png" alt="">FOLIOWAVE</a>
                 </div>
                 <div class="navlist">
                     <p><a href="index.php#contact" class="wave" id="contactLink">CONTACT</a></p>
@@ -137,7 +137,7 @@ class VueEditeur {
         <div class="container">
             <div class="header">
                 <div class="logo">
-                    <a href="index.php" id="title" class="wave"><img src="images/logo.png" alt="">FOLLIOWAVE</a>
+                    <a href="index.php" id="title" class="wave"><img src="images/logo.png" alt="">FOLIOWAVE</a>
                 </div>
                 <div class="navlist">
                     <p><a href="index.php#contact" class="wave" id="contactLink">CONTACT</a></p>
@@ -211,20 +211,21 @@ class VueEditeur {
         <div class="container">
             <div class="header">
                 <div class="logo">
-                    <a href="index.php" id="title" class="wave"><img src="images/logo.png" alt="">FOLLIOWAVE</a>
+                    <a href="index.php" id="title" class="wave"><img src="images/logo.png" alt="">FOLIOWAVE</a>
                 </div>
                 <div class="navlist">
                     <p><a href="index.php#contact" class="wave" id="contactLink">CONTACT</a></p>
                 </div>
             </div>
             
+            <div id=formu>
             <form action="index.php?module=editeur&action=upload" method="post" enctype="multipart/form-data">
                 <div class="left">
                     <input type="text" name="nom" placeholder="nom" required><br/>
                     <input type="text" name="prenom" placeholder="prenom" required>
                 </div>
                 <div class="right">
-                    <textarea name="texte1" required placeholder="Phrase d\'accroche"></textarea>
+                    <textarea name="texte1" id="ta" required placeholder="Phrase d\'accroche"></textarea>
                 </div>
                 
                 <div class="left">
@@ -248,25 +249,25 @@ class VueEditeur {
                 <div class="left">
                     <label for="imageP1">Image projet 1:</label><br/>
                     <input type="file" name="imageP1" id="imageP1"><br/>
-                    <input type="text" name="l1" placeholder="Liens vers votre projet 1" required>          
+                    <input type="text" name="l1" placeholder="Lien vers votre projet 1" required>          
                 </div>
                 
                 <div class="right">
                     <label for="imageP2">Image projet 2:</label><br/>
                     <input type="file" name="imageP2" id="imageP2"><br/>
-                    <input type="text" name="l2" placeholder="Liens vers votre projet 2" required>
+                    <input type="text" name="l2" placeholder="Lien vers votre projet 2" required>
                 </div>
                 
                 <div class="left">
                     <label for="imageP3">Image projet 3:</label><br/>
                     <input type="file" name="imageP3" id="imageP3"><br/>
-                    <input type="text" name="l3" placeholder="Liens vers votre projet 3" required>
+                    <input type="text" name="l3" placeholder="Lien vers votre projet 3" required>
                 </div>
                 
                 <div class="right">
                     <label for="imageP4">Image projet 4:</label><br/>
                     <input type="file" name="imageP4" id="imageP4"><br/>
-                    <input type="text" name="l4" placeholder="Liens vers votre projet 4" required>
+                    <input type="text" name="l4" placeholder="Lien vers votre projet 4" required>
                 </div>
                 
                 <div class="texte">
@@ -278,15 +279,16 @@ class VueEditeur {
                 </div>
                 
                 <div id="social">
-                    <input type="text" name="lkn" placeholder="Liens vers votre linkedin" required>
-                    <input type="text" name="fb" placeholder="Liens vers votre Facebook" required>
-                    <input type="text" name="twt" placeholder="Liens vers votre twitter" required>
+                    <input type="text" name="lkn" placeholder="Lien vers votre linkedin" required>
+                    <input type="text" name="fb" placeholder="Lien vers votre Facebook" required>
+                    <input type="text" name="twt" placeholder="Lien vers votre twitter" required>
                 </div>
                 
                 <center>
                     <input type="submit" name="submit" value="Upload">
                 </center>
             </form>
+            </div>
         </div>';
     }
 }
