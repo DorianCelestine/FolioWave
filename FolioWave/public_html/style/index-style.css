@@ -161,3 +161,27 @@ form button{
 	border:2px solid #27a3ff;
     margin-top:2vh;
 }
+iframe{
+    width:100vw;
+    height:100%;
+}
+
+#btndl{
+    margin:auto;
+    margin-top:2vh;
+    margin-bottom:2vh;
+    display:block;
+    margin-left:auto;
+    padding:16px 31px;
+    border-radius:29px;
+    background-color:#0e0c22;
+    color :#27a3ff;
+	border:2px solid #27a3ff;
+}
+#btndl a{
+    color :#27a3ff;
+    width:100%;
+    height:100%;
+    padding:2px;
+    display: block;
+}

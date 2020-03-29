@@ -32,12 +32,16 @@
             foreach ($fields as &$value) {
                 $this->mod->upload($value);
             }
-            $this->mod->htmlFichier();
+            $this->mod->htmlFichier("null");
             $this->mod->cssFichier();
             $this->mod->copieImages();
             $this->mod->addzip($_SESSION['dossier']);
+            $this->vue->getFrame();
+    	}
+    	
+    	public function telecharger(){
             $this->mod->telecharger();
-		}
+    	}
 		
 
 	}

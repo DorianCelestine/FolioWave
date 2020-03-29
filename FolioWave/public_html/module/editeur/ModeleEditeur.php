@@ -971,9 +971,6 @@
                         }
                         $_SESSION[$nom]=$name;
                         move_uploaded_file($_FILES[$nom]["tmp_name"], "Dossiers/".$_SESSION['dossier']."/" . $name);
-                        echo "Votre fichier a été téléchargé avec succès.";
-                    } else{
-                        echo "Error: Il y a eu un problème de téléchargement de votre fichier. Veuillez réessayer."; 
                     }
                 } else{
                     echo "Error: ".$_FILES[$nom]["error"];

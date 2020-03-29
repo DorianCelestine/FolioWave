@@ -19,6 +19,39 @@ class VueEditeur {
         </html>';
     }
 
+    public function getFrame(){
+        
+        echo'<!DOCTYPE html>
+        <html lang="fr">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                <title>FolioWave</title>
+                <script src="parallax.js"></script>
+                <link rel="stylesheet" href="style/index-style.css">
+                <link rel="stylesheet" href="style/palette.css">
+                <link rel="stylesheet" href="style/animation.css">
+                <link rel="stylesheet" href="style/form.css">
+            </head>
+            <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <a href="index.php" id="title" class="wave"><img src="images/logo.png" alt="">FOLIOWAVE</a>
+                </div>
+                <div class="navlist">
+                    <p><a href="index.php#contact" class="wave" id="contactLink">CONTACT</a></p>
+                </div>
+                
+            </div>
+            <button id="btndl"><a href="/index.php?module=editeur&action=telecharger">Télécharger l\'archive</a></button>
+
+            <body><iframe src="/Dossiers/'.$_SESSION['dossier'].'/index.html"></iframe>
+            </body>
+        </html>';
+       
+    }
+
     public function getPalette(){
         echo'
         <div class="container">

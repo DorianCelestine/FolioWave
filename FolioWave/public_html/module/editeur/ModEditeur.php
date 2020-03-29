@@ -22,6 +22,9 @@
                     $_SESSION['template']=$_POST['template'];
                     $ctrl->getForm();
      			    break;
+     			case "telecharger" :
+     			    $ctrl->telecharger();
+     			    break;
      			default:
                     $ctrl->getPalette();
      			    break;
